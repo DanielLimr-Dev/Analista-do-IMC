@@ -1,0 +1,44 @@
+#Entrada
+
+print("Olá, Vamos Calcular seu IMC!")
+
+nome = input("Digite seu nome completo: ")
+peso = float(input("Digite seu peso: "))
+altura = float(input("Digite sua altura em metros: "))  
+
+print("Ok, vamos calcular seu IMC...")
+print("Calculando...")
+
+# Cálculo do IMC
+imc = peso / altura**2
+
+# Avaliação do IMC
+if imc < 16.5:
+    resultado = "você está muito abaixo do peso"
+elif imc >= 16.5 and imc < 18.5:
+    resultado = "você está abaixo do peso"
+elif imc >= 18.5 and imc < 25:
+    resultado = "você está com o peso normal"
+elif imc >= 25 and imc < 30:
+    resultado = "você está acima do peso"
+elif imc >= 30 and imc < 35:
+    resultado = "você está com obesidade grau 1"
+elif imc >= 35 and imc < 40:
+    resultado = "você está com obesidade grau 2"
+else:
+    resultado = "você está com obesidade grau 3"
+
+# Exibição dos resultados
+print(" * * * * CALCULO DO IMC * * * *")
+print(" ")
+print(" * * * * DADOS DO PACIENTE * * * *")
+print("Nome do paciente:", nome)
+print("Peso do paciente:", peso)
+print("Altura do paciente:", altura)
+print(" ")
+print(" * * * * RESULTADO * * * *")
+print(" ")
+print("IMC do paciente:", imc)
+print("O paciente está:", resultado)
+print(" ")
+print(" * * * * SAÍDA * * * *")
